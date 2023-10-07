@@ -6,21 +6,25 @@
 /*   By: yuendo <yuendo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 12:55:56 by yuendo            #+#    #+#             */
-/*   Updated: 2023/09/29 14:53:50 by yuendo           ###   ########.fr       */
+/*   Updated: 2023/10/07 16:35:24 by yuendo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "client.h"
+#include "minitalk.h"
 
 void send_character(int pid, char c)
 {
-    for (int i = 0; i < 8; i++)
+    int i;
+
+    i = 0;
+    while (i < 8)
     {
         if ((c >> i) & 1)
             kill(pid, SIGUSR2);
         else
             kill(pid, SIGUSR1);
-        usleep(100);
+        i++;
+        usleep(200);
     }
 }
 
