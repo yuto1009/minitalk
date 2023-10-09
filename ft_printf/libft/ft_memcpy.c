@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yuendo <yuendo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: yutoendo <yutoendo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 17:09:52 by yutoendo          #+#    #+#             */
-/*   Updated: 2023/05/30 15:53:56 by yuendo           ###   ########.fr       */
+/*   Updated: 2023/10/10 07:50:21 by yutoendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	s = (const unsigned char *)src;
 	d = (unsigned char *)dst;
 	if (s == NULL && d == NULL)
-		return NULL;
+		return (NULL);
 	while (n--)
 		*d++ = *s++;
 	return (dst);

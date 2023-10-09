@@ -12,8 +12,6 @@ FT_PRINTF = $(FT_PRINTF_PATH)/libftprintf.a
 
 all: $(FT_PRINTF) $(CLIENT_NAME) $(SERVER_NAME) 
 
-$(NAME):all 
-
 $(FT_PRINTF):
 	$(MAKE) -C $(FT_PRINTF_PATH)
 

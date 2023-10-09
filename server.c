@@ -12,20 +12,20 @@
 
 #include "minitalk.h"
 
-pid_t get_newest_pid(pid_t current_pid, siginfo_t *info)
+pid_t	get_newest_pid(pid_t current_pid, siginfo_t *info)
 {
 	if (current_pid != info->si_pid)
 	{
-		return info->si_pid;
+		return (info->si_pid);
 	}
-	return current_pid;
+	return (current_pid);
 }
 
-void sigaction_handler(int signal, siginfo_t *info, void *ucontext)
+void	sigaction_handler(int signal, siginfo_t *info, void *ucontext)
 {
-	static pid_t client_pid;
-	static char	character;
-	static int	bits_received;
+	static pid_t	client_pid;
+	static char		character;
+	static int		bits_received;
 
 	(void)ucontext;
 	if (client_pid != get_newest_pid(client_pid, info))
@@ -50,7 +50,7 @@ void sigaction_handler(int signal, siginfo_t *info, void *ucontext)
 
 int	main(void)
 {
-	struct sigaction sa;
+	struct sigaction	sa;
 
 	sa.sa_sigaction = sigaction_handler;
 	sigemptyset(&sa.sa_mask);
