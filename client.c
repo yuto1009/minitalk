@@ -6,7 +6,7 @@
 /*   By: yutoendo <yutoendo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 12:55:56 by yuendo            #+#    #+#             */
-/*   Updated: 2023/10/09 18:30:52 by yutoendo         ###   ########.fr       */
+/*   Updated: 2023/10/09 20:03:28 by yutoendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,17 @@ static void	send_character(int pid, char c)
 		else
 			kill(pid, SIGUSR1);
 		i++;
-		usleep(500);
+		usleep(350);
 		// alarm(5);
 		// while (ack_received == NOT_RECEIVED)
 		// pause();
 		// alarm(RESET);
 		// ack_received = NOT_RECEIVED;
 	}
+	usleep(3250);
 	alarm(5);
 	while (ack_received == NOT_RECEIVED)
-	pause();
+		pause();
 	alarm(RESET);
 	ack_received = NOT_RECEIVED;
 }
@@ -44,6 +45,7 @@ void ack_handler(int signal)
 {
 	(void)signal;
 	ack_received = RECEIVED;
+	// ft_printf("aaa\n");
 }
 
 void timeout_handler(int signal)

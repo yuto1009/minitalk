@@ -6,7 +6,7 @@
 /*   By: yutoendo <yutoendo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 12:55:59 by yuendo            #+#    #+#             */
-/*   Updated: 2023/10/09 18:35:15 by yutoendo         ###   ########.fr       */
+/*   Updated: 2023/10/09 19:54:04 by yutoendo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,8 @@ void sigaction_handler(int signal, siginfo_t *info, void *ucontext)
 		write(1, &character, 1);
 		character = RESET;
 		bits_received = RESET;
-		usleep(500);
-		kill(client_pid, SIGUSR1);	
+		kill(client_pid, SIGUSR1);
 	}
-	// usleep(300);
-	// kill(client_pid, SIGUSR1);
 }
 
 int	main(void)
