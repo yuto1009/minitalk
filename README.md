@@ -1,5 +1,5 @@
 # minitalk
-![gif](https://github.com/yuto1009/minitalk/blob/main/minitalk.gif)
+![gif](https://github.com/yuto1009/minitalk/blob/master/minitalk_video.gif)
 ## Overview
 A user can message from Client to Server.
 This is a simple interprocess communication program using Unix signals.
