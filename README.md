@@ -1,8 +1,8 @@
 # minitalk
-
+![gif](https://github.com/yuto1009/minitalk/blob/main/minitalk.gif)
 ## Overview
-Interprocess communication program
-Send message from Client to Server
+A user can message from Client to Server.
+This is a simple interprocess communication program using Unix signals.
 ## Requirement
 - macOS
 - Clang
@@ -15,7 +15,7 @@ make
 The server program will print process ID
 Execute the client program with the process ID to send messages:
 ```
-./client 12345 Hello World! 
+./client 12345 Hello World
 ```
 
 ## License
