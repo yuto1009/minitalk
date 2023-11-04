@@ -7,4 +7,4 @@ Interprocess communication program
 ## Usage
 
 ## License
-[MIT]()
+[MIT](https://github.com/yuto1009/minitalk/blob/master/LICENSE)
