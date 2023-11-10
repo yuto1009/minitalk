@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yutoendo <yutoendo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yuendo <yuendo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 12:55:56 by yuendo            #+#    #+#             */
-/*   Updated: 2023/10/10 07:47:59 by yutoendo         ###   ########.fr       */
+/*   Updated: 2023/11/10 12:16:15 by yuendo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ static void	send_character(int pid, char c)
 		usleep(200);
 	}
 	alarm(5);
-	usleep(300);
 	alarm(RESET);
 }
 
